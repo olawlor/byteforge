@@ -18,7 +18,8 @@ do
 		name=`grep "$host " names`
 		if [ "$name" ]
 		then
-			echo -n "$name: "
+			n=`echo "$name" | head -1 | awk '{print $2}'`
+			echo -n "$n: "
 		else
 			echo -n "$host: "
 		fi
