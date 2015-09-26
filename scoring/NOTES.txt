@@ -1,0 +1,10 @@
+Basic idea:
+	nmap 10.250.100.0/24 for port 1234
+	send "Dr. Lawlor" to each open port
+
+sudo nmap -sS --open -p1234 10.250.100.100-250 > map
+grep Interesting map | sed -e 's/://' | awk '{print $4}' > IP
+
+
+
+
