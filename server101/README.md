@@ -60,7 +60,7 @@ gdb has a ton of neat commands, like:
 * **c** (Continue) lets the program keep running.
 * **q** (Quit) leaves gdb, so you can test the server again.
 
-Fix the service so it's OK!
+Fix the service so it's OK!  The changes you make with gdb only apply while that copy of the server is running.
 
 
 Eat big fish
