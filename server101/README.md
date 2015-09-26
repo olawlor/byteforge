@@ -46,7 +46,7 @@ Uh oh, it looks like your server is not OK!
 
 Check the source code, server.cpp, to see why.  Ah, there's a global variable "working_OK" that is currently set to zero!  Find and fix it by first finding your server's process ID (PID):
 
-	ps | grep service
+	ps aux | grep ./service
 
 Now connect the debugger gdb to this PID with:
 
