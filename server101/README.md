@@ -104,6 +104,14 @@ attack, so the above example won't work, but more advanced attacks can still suc
   https://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Buffer-Overflows-Linux-whitepaper.pdf
 
 
+That strange "magic" global string variable has something rather "dark" about it!
+
+  https://www.cs.uaf.edu/2015/fall/cs301/lecture/09_25_structs.html
+
+What does this global do, and why?
+
+
+
 Learn to fish
 -------------
 
@@ -112,6 +120,11 @@ Learn more about using netstat, or any command above, with:
 	man netstat
 
 Learn more about a running process by examining the files in /proc/<PID>
+
+Set up a firewall to protect this vulnerable service.
+
+  https://www.centos.org/docs/5/html/Deployment_Guide-en-US/ch-iptables.html  
+
 
 Learn more about assembly language at Dr. Lawlor's CS 301 page:
 

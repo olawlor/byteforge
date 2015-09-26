@@ -22,7 +22,8 @@ do
 		else
 			echo -n "$host: "
 		fi
-		echo "Dr. Lawlor" | nc -w 1 $host $port
+		response=`(sleep 1; echo "xeyes &") | nc -w 2 "$host" "$port"`
+		echo "$response"
 	done
 	sleep 15 || exit 1
 done
