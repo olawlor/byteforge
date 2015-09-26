@@ -60,7 +60,7 @@ gdb has a ton of neat commands, like:
 * **c** (Continue) lets the program keep running.
 * **q** (Quit) leaves gdb, so you can test the server again.
 
-Fix the service so it's OK!
+Fix the service so it's OK!  The changes you make with gdb only apply while that copy of the server is running.
 
 
 Eat big fish
@@ -99,9 +99,9 @@ If you're trying to do anything complex with this sort of attack, you need to do
 Note that modern machines include a number of protections against this sort of 
 attack, so the above example won't work, but more advanced attacks can still succeed.
 
-	http://www.madhur.co.in/blog/2011/08/06/protbufferoverflow.html
+  http://www.madhur.co.in/blog/2011/08/06/protbufferoverflow.html
 
-	https://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Buffer-Overflows-Linux-whitepaper.pdf
+  https://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Buffer-Overflows-Linux-whitepaper.pdf
 
 
 Learn to fish
