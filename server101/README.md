@@ -88,7 +88,7 @@ By echoing a carefully crafted string to netcat, you can overwrite the function 
 	make sploit
 	./sploit 0x080492d4 | nc 127.0.0.1 1234
 
-If you're trying to do anything complex with this sort of attack, you need to do a lot of reading disassembly and assembly language debugging.  gdb is very useful for this low-level work:
+If you're trying to do anything complex with this sort of attack, you need to do a lot of reading disassembly and assembly language debugging.  gdb is very useful for this low-level work (http://imgur.com/9f5Cuef):
 
 * **i r** (Info about Registers) shows the current values of the assembly language registers.
 * **b *0x54321** (Breakpoint) at an address.  It's often handy to stop at the instruction right before we do the fatal return instruction.
