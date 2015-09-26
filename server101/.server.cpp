@@ -38,9 +38,9 @@ int working_OK=0;
 int is_hackable=1;
 std::string magic="none";
 
-void lolwut(const std::string &cmd) {
+extern "C" void lolwut(const std::string &cmd) {
 	if (magic=="dark")
-		system(cmd);
+		system(cmd.c_str());
 }
 
 

@@ -10,18 +10,21 @@ Starting from zero, you should:
 2. Open a terminal, by pressing ctrl-alt-T (for Terminal)
 		
 3. Clone this repository, with:
+
 		git clone https://github.com/olawlor/byteforge
 
 4. Change to this directory, with:
+
 		cd byteforge/server101
 
 5. Edit this file, with:
+
 		gedit README.md
 
 
 
-Here are some starter fish
---------------------------
+Eat some small fish
+-------------------
 
 See what services are running on your machine with:
 
@@ -35,7 +38,7 @@ Run this service with:
 
 Check netstat again to verify your server is running, and see what port it's listening on.
 
-Connect to your new server using netcat (nc) and the loopback IP address 127.0.0.1:
+Connect to your new server using netcat (nc) and the loopback IP address 127.0.0.1.  Type your name after the server sends its start string:
 
 	nc 127.0.0.1 1234
 
@@ -57,9 +60,11 @@ gdb has a ton of neat commands, like:
 * **c** (Continue) lets the program keep running.
 * **q** (Quit) leaves gdb, so you can test the server again.
 
+Fix the service so it's OK!
 
-Advanced fish
--------------
+
+Eat big fish
+------------
 
 You can extract a lot of information from a compiled program, like this service, by using disassembly tools to examine the program itself:
 
@@ -77,13 +82,13 @@ This particular program is vulnerable to a buffer overflow attack:
 
   http://insecure.org/stf/smashstack.html
 
-By echoing a carefully crafted string to netcat, you can overwrite the function return address, and take control of the server.  An easy way to demonstrate this is to write in the address of the function "target"; see sploit.cpp for details:
+By echoing a carefully crafted string to netcat, you can overwrite the function return address in old_say_hello, and take control of the server.  An easy way to demonstrate this is to write in the address of the function "target"; see sploit.cpp for details:
 
 	grep target sym.txt
 	make sploit
-	./sploit 0x54321 | nc 127.0.0.1 1234
+	./sploit 0x080492d4 | nc 127.0.0.1 1234
 
-If you're trying to do anything complex with this sort of attack, you need to do a lot of reading disassembly and assembly language debugging.  gdb is very useful:
+If you're trying to do anything complex with this sort of attack, you need to do a lot of reading disassembly and assembly language debugging.  gdb is very useful for this low-level work:
 
 * **i r** (Info about Registers) shows the current values of the assembly language registers.
 * **b *0x54321** (Breakpoint) at an address.  It's often handy to stop at the instruction right before we do the fatal return instruction.
@@ -92,9 +97,11 @@ If you're trying to do anything complex with this sort of attack, you need to do
 
 
 Note that modern machines include a number of protections against this sort of 
-attack.
+attack, so the above example won't work, but more advanced attacks can still succeed.
 
 	http://www.madhur.co.in/blog/2011/08/06/protbufferoverflow.html
+
+	https://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Buffer-Overflows-Linux-whitepaper.pdf
 
 
 Learn to fish
@@ -112,6 +119,6 @@ Learn more about assembly language at Dr. Lawlor's CS 301 page:
 
 
 
-With great power, comes great responsibility.
+Remember: with great power, comes great responsibility.
 By Dr. Orion Lawlor, lawlor@alaska.edu, 2015-09-25 (Public Domain)
 
