@@ -48,6 +48,7 @@ void emit_shell(void) {
 	"\x68" "/tmp"  // ls argument
 	"\x89\xe1"
 	"\x50"
+	"\x31\xd2"
 	"\x51"
 	"\x53"
 	"\x89\xe1"
