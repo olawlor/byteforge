@@ -13,8 +13,8 @@ Starting from zero, you should:
                 git clone https://github.com/olawlor/byteforge
 
 Now play with some of the programs:
-	* debug060 is an introduction to debugging with gdb
-	* server101 is a 32-bit linux server, vulnerable to buffer overflow attack
+* debug060 is an introduction to debugging with gdb
+* server101 is a 32-bit linux server, vulnerable to buffer overflow attack
 
 
 Remember: with great power, comes great responsibility.

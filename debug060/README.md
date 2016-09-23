@@ -43,9 +43,9 @@ Notice how if you owe more than $500, the bank sends GUIDO after you.
 And you can't make deposits because the "teller" account is locked out.
 
 Challenges:
-	* Use the debugger to become a teller and "deposit" 1000000 into your own account
-	* Use the debugger to initiate an offshore transfer and make yourself rich
-	* Use integer overflow to combine two loans into VIP status
-	* Read the disassembly to find the secret backdoor in the bank binary (git checkout bank if you already overwrote it!)
+* Use the debugger to become a teller and "deposit" 1000000 into your own account
+* Use the debugger to initiate an offshore transfer and make yourself rich
+* Use integer overflow to combine two loans into VIP status
+* Read the disassembly to find the secret backdoor in the bank binary (git checkout bank if you already overwrote it!)
 
 
