@@ -9,13 +9,13 @@ First, run the demo program normally, using:
 
 Read the source code with:
 
-	gedit demo.cpp
+	gedit demo.cpp &
 
 To run this program in a debugger, use:
 
 	gdb ./demo
 
-We want to stop the program as soon as it starts up, so we run:
+We want to stop the program as soon as it starts up, so we tell gdb:
 
 	b main
 
@@ -32,7 +32,7 @@ You can call functions or set variables as well:
 	set x=10
 	print hero(123)
 
-You then continue running the program, and it will run from that point onward.
+You then continue running the program, and it will run normally from that point onward.
 
 	c
 
